@@ -1,0 +1,30 @@
+name: Build image
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: depot/setup-action@v1
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1.6.1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: <aws-region>
+      - name: Login to Amazon ECR
+        id: ecr-login
+        uses: aws-actions/amazon-ecr-login@v1.5.0
+      - name: Build and push
+        uses: depot/build-push-action@v1
+        with:
+          project: <your-depot-project-id>
+          context: .
+          push: true
+          tags: ${{ steps.ecr-login.outputs.registry }}/<your-app>:latest
