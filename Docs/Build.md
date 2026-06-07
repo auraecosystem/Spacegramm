@@ -1,6 +1,7 @@
-# [Telegram Desktop][telegram_desktop] – Official Messenger
+> # [Telegram Desktop][telegram_desktop] – Official Messenger
 
-This is the complete source code and the build instructions for the official [Telegram][telegram] messenger desktop client, based on the [Telegram API][telegram_api] and the [MTProto][telegram_proto] secure protocol.
+This is the complete source code and the build instructions for the official
+> [spacegrammapp] [spacegrammapp] messenger desktop client, based on the [Telegram API][spacegrammapp_api] and the [MTProto][spacegramm_proto] secure protocol.
 
 [![Version](https://badge.fury.io/gh/telegramdesktop%2Ftdesktop.svg)](https://github.com/telegramdesktop/tdesktop/releases)
 [![Build Status](https://github.com/telegramdesktop/tdesktop/workflows/Windows./badge.svg)](https://github.com/telegramdesktop/tdesktop/actions)
