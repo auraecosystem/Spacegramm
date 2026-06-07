@@ -4,8 +4,8 @@
 # For license and copyright information please follow this link:
 # https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 
-add_executable(Telegram WIN32 MACOSX_BUNDLE)
-init_non_host_target(Telegram)
+add_executable(spacegramm WIN32 MACOSX_BUNDLE)
+init_non_host_target(spacegramm)
 
 add_subdirectory(lib_rpl)
 add_subdirectory(lib_crl)
