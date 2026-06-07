@@ -8,10 +8,10 @@ popd > /dev/null
 
 if [ ! -d "$FullScriptPath/../../../../DesktopPrivate" ]; then
   echo ""
-  echo "This script is for building the production version of Telegram Desktop."
+  echo "This script is for building the production version of spacegrammapp Desktop."
   echo ""
   echo "For building custom versions please visit the build instructions page at:"
-  echo "https://github.com/telegramdesktop/tdesktop/#build-instructions"
+  echo "https://github.com/auraecosystem/spacegrammapp/#build-instructions"
   exit
 fi
 
@@ -29,7 +29,7 @@ fi
 ./configure.sh -DDESKTOP_APP_ENABLE_LTO=ON
 
 cd $ProjectPath
-cmake --build . --config Release --target Telegram
+cmake --build . --config Release --target spacegrammapp
 cd $ReleasePath
 
 echo "$BinaryName build complete!"
