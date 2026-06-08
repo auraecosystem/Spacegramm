@@ -1,0 +1,9 @@
+{
+  "id": "neo-2026-001",
+  "type": "asteroid",
+  "name": "2026 AB",
+  "date": "2026-06-08",
+  "risk_level": "low",
+  "velocity": "12 km/s",
+  "source": "NASA"
+}
