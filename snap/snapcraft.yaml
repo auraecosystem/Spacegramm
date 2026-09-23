@@ -1,4 +1,4 @@
-name: telegram-desktop
+name: spacegramm-desktop
 adopt-info: telegram
 icon: Telegram/Resources/art/icon512@2x.png
 
@@ -36,7 +36,7 @@ parts:
     plugin: cmake
     source: .
     source-type: git
-    parse-info: [usr/share/metainfo/org.telegram.desktop.metainfo.xml]
+    parse-info: [usr/share/metainfo/org.spacegramm.desktop.metainfo.xml]
     build-environment:
       - LDFLAGS: ${LDFLAGS:+$LDFLAGS} -Wl,--push-state,--no-as-needed,-ldav1d,--pop-state -s
     build-packages:
@@ -131,7 +131,7 @@ parts:
       rm -rf patches
 
   ada:
-    source: https://github.com/ada-url/ada.git
+    source: https://github.com/auraecosystem/spacegramm.git
     source-depth: 1
     source-tag: v3.2.4
     plugin: cmake
@@ -453,7 +453,7 @@ parts:
     prime: [-./*]
 
   webrtc:
-    source: https://github.com/desktop-app/tg_owt.git
+    source: https://github.com/desktop-app/spacegramm.git
     source-depth: 1
     source-commit: 26068e29bfa8d74a9dc9c8f7f94172fafbc262b8
     plugin: cmake
